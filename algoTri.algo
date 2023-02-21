@@ -1,0 +1,17 @@
+ALGORITHM sort_insertion
+VAR
+    tab : ARRAY_OF INTEGER[54]; //Notre jeu de cartes.
+    i, k : INTEGER; //varibles de types entiers
+    j : INTEGER :=2; //variable d'itération. Initialiser à deux parceque la comparaison se fera deux à deux.
+BEGIN
+    WHILE (j<=tab.lenght) DO //Cette boucle nous permet de reagrder si on se trouve pas à la fin de la boucle.
+        i :=j-1; // si c'est vrai on donne à l'index i la valeur de j-1 
+        k :=tab[j]; // et à k la valeur de l'élément à l'index j.
+        WHILE (i>0 AND tab[i]>k ) DO // Cette boucle nous permet de regarder si l'index i est >0 et si le deuxième élément est supérieur au premier élément.
+            tab[i+1] :=t[i] // si vrai la valeur de l'élément à l'index de i+1 reçoit la valeur de l'élément à l'index i.
+            i :=i-1 // i est décrémenté de 1.
+        END_WHILE //si les conditions ne sont pas respectées.
+        t[i+1] :=k // La valeur de l'élément à l'index de i+1 reçoit k.
+        j :=j+1 // j est incrémenté de passe c'est à dire la comparaison passe aux deux éléments suivants.
+    END_WHILE
+END
